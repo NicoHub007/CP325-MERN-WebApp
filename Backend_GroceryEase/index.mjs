@@ -10,7 +10,9 @@ import db from "./db/conn.mjs";
 // import cors so that my frontend and backend can communicate
 import cors from "cors";
 // import my routes from their folders
-
+import groceries from "./routes/grocery.mjs";
+import orders from "./routes/order.mjs";
+import users from './routes/user.mjs'
 
 // set up port
 const PORT = process.env.PORT || 5052;
@@ -27,13 +29,13 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send(
         "<h1>GroceryEase API</h1>",
-        "<ol>endpoints: <li> Grocery Items - /api/groceryItems</li> <li> orders - /api/orders</li> <li> users - /api/users</li> <ol>"
+        "<ol>endpoints: <li> Groceries - /api/groceries</li> <li> Orders - /api/orders</li> <li> Users - /api/users</li> <ol>"
     );
 });
 
 
 // fill in my endpoint routes - but they will be in their own folders
-app.use("/api/groceryItems", groceryItems);
+app.use("/api/groceries", groceries);
 app.use("/api/orders", orders);
 app.use("/api/users", users);
 
