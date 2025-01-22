@@ -1,0 +1,16 @@
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 8px;
+    background-color: #f9f9f9;
+}
+.employee-card h3 {
+    margin: 0 0 8px;
+}
+.employee-card p {
+    margin: 4px 0;
+    color: #555;
+}
